@@ -1,0 +1,26 @@
+<h1>Movie <%= @the_movie.id %> details</h1>
+
+<a href="/movies">Go back</a>
+
+<dl>
+  <dt>Title</dt>
+  <dd><%= @the_movie.title %></dd>
+
+  <dt>Year</dt>
+  <dd><%= @the_movie.year %></dd>
+
+  <dt>Duration</dt>
+  <dd><%= @the_movie.duration %> min</dd>
+
+  <dt>Description</dt>
+  <dd><%= @the_movie.description %></dd>
+
+  <dt>Image</dt>
+  <dd><img src="<%= @the_movie.image %>" width="200"></dd>
+
+  <dt>Director</dt>
+      <% matching_records = Director.where({:id => @the_movie.director_id}) %>
+      <% the_director = matching_records.at(0) %>
+  <dd><%= the_director.name %></dd>
+
+</dl>
