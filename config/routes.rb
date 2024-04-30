@@ -1,9 +1,9 @@
 Rails.application.routes.draw do
   get("/", { :controller => "misc", :action => "homepage" })
 
-  get("directors", {})
+  get("directors", { :controller => "", :action => ""})
 
-  get("actors", { :controller})
+  get("actors", { :controller => "", :action => ""})
 
-  get("movies", {})
+  get("movies", { :controller => "", :action => ""})
 end
