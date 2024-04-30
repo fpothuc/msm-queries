@@ -5,7 +5,7 @@ class ActorsController < ApplicationController
 
   def show
     actor_id = params.fetch("actor_id")
-    matching_records = Movie.where({ :id => actor_id })
+    matching_records = Actor.where({ :id => actor_id })
     @the_actor = matching_records.at(0)
 
     render({ :template => "actor_templates/details"})
